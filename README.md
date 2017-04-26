@@ -103,7 +103,7 @@ The configuration entry `"httpMode": false` will enable https.
 
 ## Option 2.1: HTTPS (Generate self signed keys on startup - no pem files)
 The configuration entry `"httpMode": false` will enable https.
-To enforce generation of self signed certificates dynamically on startup, the ``key``` and ```cert``` options must be kept empty ```""```
+Note: To enforce generation of self signed certificates dynamically on startup, the ```key```, ```cert``` and ```ca```  options must be  empty and ```requestCert``` & ```rejectUnauthorized``` must be ```false```. Note: this option will not work if Mutual SSL (Option 3) is enabled.
 
 ```js
   "httpMode": false,
@@ -150,7 +150,7 @@ To enforce generation of self signed certificates dynamically on startup, the ``
 [trusted_peer]: https://github.com/coolaj86/nodejs-ssl-trusted-peer-example
 [self_signed]: https://github.com/coolaj86/nodejs-self-signed-certificate-example
 
-# Contributing to Yantrashala/loopbacl-ssl
+# Contributing to Yantrashala/loopback-ssl
 
 We welcome contributions, but request you follow these guidelines.
  - [Raising issues](#raising-issues)
@@ -175,7 +175,7 @@ relevant nodes, press Ctrl-E and copy the flow data from the Export dialog.
 
 At a minimum, please include:
 
- - Version of loopvack-ssl - either release number if you downloaded a zip, or the first few lines of `git log` if you are cloning the repository directly.
+ - Version of loopback-ssl - either release number if you downloaded a zip, or the first few lines of `git log` if you are cloning the repository directly.
  - Version of node.js - what does `node -v` say?
 
 ## Feature requests
