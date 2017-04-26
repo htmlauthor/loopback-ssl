@@ -103,7 +103,10 @@ The configuration entry `"httpMode": false` will enable https.
 
 ## Option 2.1: HTTPS (Generate self signed keys on startup - no pem files)
 The configuration entry `"httpMode": false` will enable https.
-Note: To enforce generation of self signed certificates dynamically on startup, the ```key```, ```cert``` and ```ca```  options must be  empty and ```requestCert``` & ```rejectUnauthorized``` must be ```false```. Note: this option will not work if Mutual SSL (Option 3) is enabled.
+
+###Note: 
+- To enforce generation of self signed certificates dynamically on startup, the ```key```, ```cert``` and ```ca```  options must be  empty and ```requestCert``` & ```rejectUnauthorized``` must be ```false```
+- This option will not work if Mutual SSL (Option 3) is enabled.
 
 ```js
   "httpMode": false,
