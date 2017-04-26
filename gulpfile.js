@@ -32,7 +32,7 @@ function isFixed(file) {
 gulp.task('test', function (cb) {
   gulp.src([
     'index.js',
-    'lib/**/*.js'])
+    'lib/loopback-ssl.js'])
     .pipe(istanbul())
     .pipe(istanbul.hookRequire())
     .on('finish', function () {

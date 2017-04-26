@@ -10,6 +10,7 @@ var testConfig4 = require('./fixtures/configs/config-4.json');
 var testConfig5 = require('./fixtures/configs/config-5.json');
 var testConfig6 = require('./fixtures/configs/config-6.json');
 var testConfig7 = require('./fixtures/configs/config-7.json');
+var testConfig8 = require('./fixtures/configs/config-8.json');
 
 describe('Testing Certificate Configuration', function () {
   it('test:1 - should be able to load server key and certificates', function(done){
@@ -55,5 +56,10 @@ describe('Testing Certificate Configuration', function () {
     } catch (e) {
       done();
     }
+  });
+
+  it('test:8 - should be able to dynamicall load server key and certificates if pem, cert and key is empty', function(done){
+    var ret = loopbackSSL.getServerOptions(testConfig8.certConfig);
+    done();
   });
 });

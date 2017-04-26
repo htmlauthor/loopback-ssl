@@ -52,5 +52,7 @@
     "shrinkwrap": "0.4.0",
     "tape": "4.6.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "pem": "1.9.4"
+  }
 }
